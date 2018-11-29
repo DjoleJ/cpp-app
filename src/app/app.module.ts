@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ChartsProvider } from '../providers/charts/charts';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataProvider
+    DataProvider,
+    ChartsProvider
   ]
 })
 export class AppModule {}

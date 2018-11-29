@@ -48,11 +48,14 @@ page-convert {
     }
 
     .form-uth-amount,
-    .form-your-address,
-    .form-fee,
-    .form-doto {
+    .form-your-address {
         padding: 15px;
         padding-bottom: 0;
+    }
+
+    .col-1,
+    .col-2 {
+        padding: 10px;
     }
 
     .form-uth-amount label {
@@ -177,16 +180,20 @@ page-convert {
 
     ion-item {
         background-color: #3b3940 !important;
-        width: 500px !important;
+        width: 100% !important;
+        margin: 0;
     }
 
     ion-toggle.toggle.toggle-md {
         width: 1000px !important;
         height: 30px !important;
+        padding: 0;
+        padding-top: 20px;
     }
 
     div.item-inner {
-        width: 300px !important;
+        
+        padding: 0;
     }
 
     .input-wrapper {
@@ -196,8 +203,8 @@ page-convert {
         padding-left: 0;
     }
     .item-block {
-        width: 70% !important;
-        margin: 0 auto;
+        
+        
         
     }
 
@@ -210,8 +217,8 @@ page-convert {
     }
 
     .toggle-icon {
-        width: 220px !important;
-        margin-right: 0 !important;
+        width: 65% !important;
+        margin: 0 auto !important;
         background-color: #565658 !important;
     }
 
@@ -219,7 +226,7 @@ page-convert {
         content: 'COLATERAL';
         position: absolute;
         top: 5px;
-        left: 120px;
+        left: 57.5%;
         color: #f53d3d;
     }
 
@@ -231,7 +238,7 @@ page-convert {
         position: absolute !important;
         top: 1px !important;
         height: 28px !important;
-        width: 110px !important;
+        width: 52% !important;
         border-radius: 20px !important;
         background-color: color($colors, secondary) !important;
     }
@@ -240,24 +247,24 @@ page-convert {
         content: 'BURN';
         position: absolute;
         top: 3.5px;
-        left: 35px;
+        left: 30%;
         color: white;
         
     }
 
     .toggle-md.toggle-checked .toggle-inner {
-        transform: translate3d(110px, 0, 0) !important;
+        transform: translate3d(92%, 0, 0) !important;
         background-color: color($colors, secondary) !important;
     }
 
     .toggle-md.toggle-checked .toggle-icon::after {
         content: 'BURN';
-        left: 35px;
+        left: 15%;
     }
 
     .toggle-md.toggle-checked .toggle-inner::after {
         content: 'COLATERAL';
-        left: 10px;
+        left: 15%;
     }
 
     .segment-activated {
@@ -282,6 +289,8 @@ page-convert {
 
 }
 
+
+//alert styles
 .alert-md .alert-wrapper {
     width: 90% !important;
     height: 220px !important;

@@ -6,6 +6,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 import { DataProvider } from '../../providers/data/data';
+import { ChartsProvider } from '../../providers/charts/charts';
 import { Post } from '../../models/Post';
 
 @IonicPage()
@@ -31,6 +32,8 @@ export class IndexPage {
   xmrUsdData: Post;
   xmrEurData: Post;
 
+  
+
   hide: boolean;
   // p1: string;
 
@@ -47,7 +50,7 @@ export class IndexPage {
     }
   ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private DataService: DataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private DataService: DataProvider, private ChartsService: ChartsProvider) {
   }
 
 
@@ -102,7 +105,9 @@ export class IndexPage {
       this.xmrEurData.hide = true;
     });
 
-    this.chart = new Chart('canvas', {
+    this.ChartsService.getCharts();
+
+    this.chart = [new Chart('canvas', {
       type: 'line',
       data: {
           labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -137,7 +142,8 @@ export class IndexPage {
               }]
           }
       }
-  });
+  })];
+  
     
 
 
